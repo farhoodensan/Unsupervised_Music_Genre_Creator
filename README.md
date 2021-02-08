@@ -1,6 +1,6 @@
 # Subverting Genre Norms with Unsupervised Clustering
 
-DSC160 Data Science and the Arts - Midterm Project Repository - Spring 2020
+Data Science and the Arts - Midterm Project Repository - Spring 2020
 
 <b> Project Team Members: </b>
 - Farhood Ensan, fensan@ucsd.edu
