@@ -1,7 +1,5 @@
 # Subverting Genre Norms with Unsupervised Clustering
 
-Data Science and the Arts - Spring 2020
-
 <b> Project Team Members: </b>
 - Farhood Ensan, fensan@ucsd.edu
 - Rebecca Hu, reh016@ucsd.edu
@@ -10,8 +8,6 @@ Data Science and the Arts - Spring 2020
 
 ## Abstract
 
-(10 points)
-
   Genre as we know it classifies music based on a variety of not only musical qualities but social ones. Music might be associated with each other because of their time period, the artist who produced them, their popularity, and myriad other components that may have little to do with how the music actually sounds. We decided to see if an unsupervised machine learning algorithm might spurn the biases of our social expectations of genre and cluster songs by the similarity of their audio features alone. We hypothesize that while the way people classify genres has a lot of historical and social context inherently, a machine algorithm could potentially draw unique connections between songs based purely on the audio features.
 
   Inspired by genre classification using an SVM in class, we instead use unsupervised learning for genre classification. We will scrape different genres of audio data from freemusicarchive.org. With the librosa library, we will use the librosa.feature functions to extract the features MFCC, CENS, and spectral contrast. We will test hierarchical density-based clustering, k-means, and affinity clustering and examine the way the grouping results interact genre conventions. Results will be presented in graphs, charts, and sonification. Because the algorithm will only intake data about what the song sounds like, we hope that it will draw novel connections between unusual songs in a potentially genre-breaking way.
@@ -19,14 +15,10 @@ Data Science and the Arts - Spring 2020
 
 ## Data
 
-(10 points)
-
 The cultural data source we use in our project is an audio dataset from Free Music Archive (FMA), an online audio library containing legal music from various genres and artists. The dataset was created in 2016 and contains data that is natively digital. This open-source dataset was created by Defferrard, et al. and more information regarding the collection and curation of this dataset can be found in [their paper](https://arxiv.org/pdf/1612.01840.pdf). The specific files we used for our analysis included features of audio files extracted using the Librosa library, as well as metadata regarding each track's associated genres and artist.
 
 
 ## Code
-
-(20 points)
 
 <b>Data Acquisition: </b>
 - [Data Acquisition](https://github.com/ucsd-dsc-arts/dsc160-midterm-group2/blob/master/code/data_acquisition.ipynb): This notebook cleans the reorganizes the multi-indices in the <i>features.csv</i> and removes unnecessary columns to simplify our analysis. Note: Data can be downloaded from [this repository](https://github.com/mdeff/fma).
@@ -55,8 +47,6 @@ PCA (Principal Component Analysis) is a technique which finds the major patterns
 - [Cluster Characterization](https://github.com/ucsd-dsc-arts/dsc160-midterm-group2/blob/master/code/Cluster_Characterization.ipynb): We chose to explore the groupings created by the K-means UMAP because of the clarity of its groupings by listening to the music that is found in each grouping.
 
 ## Results
-
-(30 points)
 
 - [Affinity Propagation Results](https://github.com/ucsd-dsc-arts/dsc160-midterm-group2/blob/master/results/af_results.jpg): We concluded that affinity propagation was not an appropriate algorithm for our problem. The number of resulting clusters is not predefined with this algorithm and so we often obtained results with over 100 unique clusters. With this number of clusters, we found it difficult to uniquely identify characteristics of each cluster and difficult to visualize.
 
@@ -96,8 +86,6 @@ K-means together with UMAP seemed to have the most ideal results as far as unsup
   Heavily synthetic computer generated sounds with high tempos. Almost all hip hop and electronic music. Extremely electronic, almost dubstep-esque. Even the folk songs have a more synth-like quality to them.
 
 ## Discussion
-
-(30 points)
 
 The UMAP feature reduction combined with K-means seemed to have the clearest results, yielding the interesting perspective that the genre is not all that predictive of audio groupings. By listening to the tracks in each cluster, we found that the songs nearly seemed to have been categorized into mood/sentiment, the descriptions of which are above. This affirms a hypothesis that a classification of music based purely on audio features would actually be very different from the way genres group music through a myriad of social constructs.
 
